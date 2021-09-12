@@ -12,13 +12,8 @@ def zbadaj_Trojkat():
     c = int(input('Podaj długość boku c: '))
 
     boki = [a, b, c]
-    print(boki)
     boki_sorted = sorted(boki)
-    print(boki_sorted)
     rownoramienny = len(set(boki_sorted))
-    print(rownoramienny)
-    print(boki_sorted[0])
-    print(a)
 
     if (boki_sorted[2] ** 2) == (boki_sorted[0] ** 2) + (boki_sorted[1] ** 2) and a != 0 and b != 0 and c != 0:
         print('Trójkąt o podanych bokach a,b,c jest trójkątem: prostokątnym')
