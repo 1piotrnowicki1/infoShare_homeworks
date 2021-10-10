@@ -2,7 +2,7 @@ class Member:
     klient = 1
 
     def __init__(self, Imie, Nazwisko, Password):
-        self.Lp = self.klient
+        self.id = self.klient
         self.Imie = Imie
         self.Nazwisko = Nazwisko
         self.Password = Password
