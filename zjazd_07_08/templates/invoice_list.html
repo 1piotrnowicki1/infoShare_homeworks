@@ -1,0 +1,38 @@
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>Title</title>#}
+{#</head>#}
+{#<body>#}
+{#    <ul>#}
+{#        {% for invoice in object_list %}#}
+{#        <li>{{ invoice.client }}  {{ invoice.payment_date }}  {{ invoice.price }}  {{ invoice.status }}</li>#}
+{#        {% endfor %}#}
+{#    </ul>#}
+{#</body>#}
+{#</html>#}
+
+
+{#<table summary="invoices">#}
+{#    <tr><th>Column 1</th> <th> Column 2</th></tr>#}
+{#{% for invoice in object_list %}#}
+{#    <tr><td>{{ invoice.client }}</td><td>{{ invoice.price }}</td></tr>#}
+{#{% endfor %}#}
+{#</table>#}
+
+<table border="1" cellpadding="4">
+    <tr align="left">
+        <th>FIRMA</th><th>DATA PŁATNOŚCI</th><th>STATUS</th><th>KWOTA</th>
+    </tr>
+{% for invoice in object_list %}
+    <tr>
+        <td>{{ invoice.client }}</td><td>{{ invoice.payment_date }}</td><td>{{ invoice.status }}</td><td>{{ invoice.price }}</td>
+    </tr>
+{% endfor %}
+</table>
+
+
+
+
+
