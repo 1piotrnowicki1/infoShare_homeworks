@@ -1,25 +1,6 @@
-{#<!DOCTYPE html>#}
-{#<html lang="en">#}
-{#<head>#}
-{#    <meta charset="UTF-8">#}
-{#    <title>Title</title>#}
-{#</head>#}
-{#<body>#}
-{#    <ul>#}
-{#        {% for invoice in object_list %}#}
-{#        <li>{{ invoice.client }}  {{ invoice.payment_date }}  {{ invoice.price }}  {{ invoice.status }}</li>#}
-{#        {% endfor %}#}
-{#    </ul>#}
-{#</body>#}
-{#</html>#}
+{% load office_templatetags %}
+<!DOCTYPE html>
 
-
-{#<table summary="invoices">#}
-{#    <tr><th>Column 1</th> <th> Column 2</th></tr>#}
-{#{% for invoice in object_list %}#}
-{#    <tr><td>{{ invoice.client }}</td><td>{{ invoice.price }}</td></tr>#}
-{#{% endfor %}#}
-{#</table>#}
 
 <head>
     <title>Sum of invoices</title>
@@ -39,13 +20,19 @@
     </script>
 </head>
 
-<table border="1" cellpadding="4" style="text-align: center;">
+
+<table border="1" cellpadding="4" style="text-align: left;">
     <tr align="left">
         <th>FIRMA</th><th>DATA PŁATNOŚCI</th><th>STATUS</th><th>KWOTA</th>
     </tr>
 {% for invoice in object_list %}
     <tr>
-        <td>{{ invoice.client }}</td>
+        <td>{% my_temp_tag invoice.client %}</td>
+
+{#        style="due"#}
+{#        <td class={{ invoice.payment_date|row_styler }}>{{ invoice.payment_date }}</td>#}
+
+
         <td>{{ invoice.payment_date }}</td>
         <td>{{ invoice.status }}</td>
         <td>{{ invoice.price }}</td>
@@ -56,6 +43,17 @@
         <td id="totalsum" style="font-weight: bold;"></td>
     </tr>
 </table>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
