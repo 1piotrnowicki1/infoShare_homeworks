@@ -15,7 +15,7 @@ def pitagoras_c():
     #     print('is not int')
 
     side_c = sqrt(side_a * side_a + side_b * side_b)
-
+    
     print(f'The length of side c is: {side_c}')
     print(side_c)
 
