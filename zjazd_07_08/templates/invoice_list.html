@@ -1,8 +1,10 @@
 {% load office_templatetags %}
+{% load static %}
 <!DOCTYPE html>
 
 
 <head>
+    <link rel="stylesheet" href="{% static 'due.css' %}">
     <title>Sum of invoices</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
@@ -26,7 +28,7 @@
         <th>FIRMA</th><th>DATA PŁATNOŚCI</th><th>STATUS</th><th>KWOTA</th>
     </tr>
 {% for invoice in object_list %}
-    <tr>
+    <tr class="{{ invoice|row_styler }}">
         <td>{% my_temp_tag invoice.client %}</td>
 
 {#        style="due"#}

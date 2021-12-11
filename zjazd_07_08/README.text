@@ -4,9 +4,10 @@ Stworzyć model Faktura który będzie zawierał takie dane jak: termin płatno�
 Wyświetlić wszystkie faktury w widoku który pokaże tabelę z fakturami i jeszcze na dole pokaże sumę z wszystkich faktur
 
 HW8:
-W tym samym folderze dodać templatetag który podkreśli faktury które zostały opłacone, na ciemnozielono których termin płatności jeszcze nie minął,
-żółto którym zostało jeszcze tylko 7 dni i na czerwono których termin płatności minął. Podpowiedzi: Warto wykorzystać moduł datetime do sprawdzenia
-czasu i różnicy między datami.
+W tym samym folderze dodać templatetag który podkreśli faktury które zostały opłacone
+na ciemnozielono których termin płatności jeszcze nie minął,
+żółto którym zostało jeszcze tylko 7 dni i na czerwono których termin płatności minął.
+Podpowiedzi: Warto wykorzystać moduł datetime do sprawdzenia czasu i różnicy między datami.
 
 https://docs.djangoproject.com/en/3.2/howto/custom-template-tags/
 

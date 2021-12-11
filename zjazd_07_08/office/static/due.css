@@ -1,3 +1,17 @@
-.due{
+.overdue{
     color: red;
+}
+
+.due{
+    color: darkgreen;
+}
+
+
+.pay-now{
+    color: yellow;
+}
+
+
+.paid{
+    color: aqua;
 }

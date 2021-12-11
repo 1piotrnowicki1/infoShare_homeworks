@@ -21,3 +21,16 @@ def my_temp_tag(invoice_client):
 #         return 'new'
 #     return mark_safe(style)
 
+@register.filter
+def row_styler(invoice):
+    payment_status = invoice.status
+    payment_date = invoice.payment_date
+    today = date.today()
+    if payment_status == "zaplacone":
+        return 'paid'
+    elif (payment_date - today).days > 7:
+        return 'due'
+    elif 0 < (payment_date - today).days < 7:
+        return 'pay-now'
+    elif (payment_date - today).days < 1:
+        return 'overdue'
